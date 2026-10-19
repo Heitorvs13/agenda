@@ -15,7 +15,7 @@
         <form id="form-contato">
             <section class="linha">
                 <label for="name" hidden>Nome</label>
-                <input type="text" id="name" name="name" placeholder="Informe o nome" required>
+                <input type="text" class="name-input" id="name" name="name" placeholder="Informe o nome" required>
                 <button type="button" id="favorite" class="favorite">
                     <svg class="fav-true" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -23,10 +23,10 @@
                     </svg>
                 </button>
             </section>
-            <label for="fone" hidden>Telefone</label>
-            <input type="tel" id="fone" name="fone" placeholder="Informe o telefone" required>
+            <label for="phone" hidden>Telefone</label>
+            <input type="tel" class="phone-input" id="phone" name="phone" placeholder="Informe o telefone" required>
             <label for="email" hidden>E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Informe o email" required>
+            <input type="email" class="email-input" id="email" name="email" placeholder="Informe o email" required>
 
         </form>
         <button id="save-contact" class="save">Salvar</button>
@@ -35,7 +35,7 @@
     <section class="pesquisa">
         <form>
             <label for="search" hidden></label>
-            <input type="text" id="search" name="search" placeholder="Busque por nome, telefone ou e-mail">
+            <input type="text" class="search-input" id="search" name="search" placeholder="Busque por nome, telefone ou e-mail">
             <button type="button">
                 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="54" height="54" rx="26.5" fill="#E5E4E4" />
