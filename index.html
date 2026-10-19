@@ -16,12 +16,13 @@
             <section class="linha">
                 <label for="name" hidden>Nome</label>
                 <input type="text" class="name-input" id="name" name="name" placeholder="Informe o nome" required>
-                <button type="button" id="favorite" class="favorite">
-                    <svg class="fav-true" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                <label>
+                    <input type="checkbox" id="favorite" class="favorite">
+                    <svg class="fav-icon" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M25.203 0L31.1526 18.3111H50.406L34.8297 29.6279L40.7793 47.9389L25.203 36.6221L9.62669 47.9389L15.5763 29.6279L5.72205e-06 18.3111H19.2534L25.203 0Z" />
                     </svg>
-                </button>
+                </label>
             </section>
             <label for="phone" hidden>Telefone</label>
             <input type="tel" class="phone-input" id="phone" name="phone" placeholder="Informe o telefone" required>
@@ -35,7 +36,8 @@
     <section class="pesquisa">
         <form>
             <label for="search" hidden></label>
-            <input type="text" class="search-input" id="search" name="search" placeholder="Busque por nome, telefone ou e-mail">
+            <input type="text" class="search-input" id="search" name="search"
+                placeholder="Busque por nome, telefone ou e-mail">
             <button type="button">
                 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="54" height="54" rx="26.5" fill="#E5E4E4" />

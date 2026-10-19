@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
 
-:root{
+:root {
     --background-dark: #3B3B3B;
     --background-light: #F4F4F4;
     --background-light-hover: #E5E4E4;
@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-button{
+button {
     padding: 0px;
     border: none;
     background-color: none;
@@ -27,11 +27,11 @@ button{
     cursor: pointer;
 }
 
-body{
+body {
     display: grid;
     grid-template-columns: minmax(0, min(500px, 33.33vw)) 2fr;
     grid-template-rows: 1fr 3fr;
-    grid-template-areas: 
+    grid-template-areas:
         "formulario pesquisa"
         "formulario agenda";
     width: 100dvw;
@@ -48,14 +48,14 @@ body{
     gap: 25px;
 }
 
-.formulario h1{
+.formulario h1 {
     font-family: var(--font-light);
     font-size: 2rem;
     font-weight: 600;
     padding: 2rem;
 }
 
-.formulario form{
+.formulario form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +63,9 @@ body{
     padding: 0px 0.6rem;
 }
 
-.formulario input{
+.formulario input[type="text"],
+input[type="tel"],
+input[type="email"] {
     width: 22rem;
     padding: 5px 12px;
     border: none;
@@ -74,26 +76,33 @@ body{
     font-weight: 300;
 }
 
-.formulario .linha{
+.favorite {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.fav-icon {
+    height: 2.5rem;
+    width: auto;
+    fill: var(--background-light-hover);
+}
+
+.favorite:checked ~ .fav-icon{
+    fill: var(--star);
+}
+
+.formulario .linha {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
 }
 
-.favorite .fav-false {
-    height: 2.5rem;
-    width: auto;
-    fill: var(--background-light-hover);
-}
 
-.favorite .fav-true {
-    height: 2.5rem;
-    width: auto;
-    fill: var(--star);
-}
 
-.formulario .save{
+.formulario .save {
     padding: 12px 20px;
     border-radius: 10px;
     font-family: var(--font-light);
@@ -112,7 +121,7 @@ body{
     justify-content: center;
 }
 
-.pesquisa form{
+.pesquisa form {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -121,7 +130,7 @@ body{
     gap: 10px;
 }
 
-.pesquisa input{
+.pesquisa input {
     width: 70%;
     padding: 5px 12px;
     border: none;
@@ -132,14 +141,14 @@ body{
     font-weight: 300;
 }
 
-.agenda{
+.agenda {
     grid-area: agenda;
     background-color: var(--background-light-hover);
     display: flex;
     flex-direction: column;
 }
 
-.agenda .filtros{
+.agenda .filtros {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -149,22 +158,22 @@ body{
     background-color: var(--background-dark);
 }
 
-.filtros button[aria-pressed="false"]{
+.filtros button[aria-pressed="false"] {
     height: 90%;
     box-shadow: inset -4px 0px 5px #00000050;
 }
 
-.filtros button[aria-pressed="true"]{
+.filtros button[aria-pressed="true"] {
     height: 100%;
     box-shadow: inset 0px 0px 10px #00000050;
 }
 
-.filtros button[filter="favs"]{
+.filtros button[filter="favs"] {
     background-color: var(--emphasis);
     padding: 10px 30px;
 }
 
-.filtros .alfabeticos{
+.filtros .alfabeticos {
     width: 100%;
     height: 100%;
     display: flex;
@@ -173,7 +182,7 @@ body{
     justify-content: space-between;
 }
 
-.alfabeticos button{
+.alfabeticos button {
     width: 100%;
     background-color: var(--filters);
     color: white;
@@ -181,7 +190,7 @@ body{
     font-size: 2rem;
 }
 
-.filtros button[filter="all"]{
+.filtros button[filter="all"] {
     background-color: var(--emphasis);
     font-family: var(--font-light);
     font-size: 2rem;
@@ -195,11 +204,11 @@ body{
     fill: var(--star);
 }
 
-.contatos{
+.contatos {
     overflow-y: auto;
 }
 
-.contatos .contato{
+.contatos .contato {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -209,31 +218,31 @@ body{
     border-bottom: 1px solid var(--background-dark);
 }
 
-.contato .dados{
+.contato .dados {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contato .dados header{
+.contato .dados header {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
 
-.dados h1{
+.dados h1 {
     font-family: var(--font-bold);
     font-size: 2rem;
     font-weight: normal;
 }
 
-.dados .fav-false{
+.dados .fav-false {
     height: 2rem;
     fill: #00000020;
 }
 
-.dados .fav-true{
+.dados .fav-true {
     height: 2rem;
     fill: var(--star);
 }
@@ -242,19 +251,19 @@ body{
     padding: 0px 3rem;
 }
 
-.dados li{
+.dados li {
     padding: 0px 1rem;
     font-family: var(--font-bold);
     font-weight: 300;
     font-size: 1.2rem;
 }
 
-.contato .operacoes{
+.contato .operacoes {
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
-.operacoes svg{
+.operacoes svg {
     height: 1.5rem;
 }
