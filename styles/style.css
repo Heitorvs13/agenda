@@ -3,7 +3,7 @@
 :root {
     --background-dark: #3B3B3B;
     --background-light: #F4F4F4;
-    --background-light-hover: #E5E4E4;
+    --background-light-hover: #cfcbcb;
     --confirm: #5CBC62;
     --star: #FFCE2B;
     --emphasis: #A23333;
@@ -87,6 +87,7 @@ input[type="email"] {
     height: 2.5rem;
     width: auto;
     fill: var(--background-light-hover);
+    cursor: pointer;
 }
 
 .favorite:checked ~ .fav-icon{
