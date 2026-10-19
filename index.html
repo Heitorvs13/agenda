@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="./js/app.js" defer></script>
     <title>Agenda</title>
 </head>
 
 <body>
     <section class="formulario">
         <h1>Cadastro de Contato</h1>
-        <form>
+        <form id="form-contato">
             <section class="linha">
                 <label for="name" hidden>Nome</label>
-                <input type="text" id="name" name="name" placeholder="Informe o nome">
+                <input type="text" id="name" name="name" placeholder="Informe o nome" required>
                 <button type="button" id="favorite" class="favorite">
                     <svg class="fav-true" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -23,9 +24,9 @@
                 </button>
             </section>
             <label for="fone" hidden>Telefone</label>
-            <input type="tel" id="fone" name="fone" placeholder="Informe o telefone">
+            <input type="tel" id="fone" name="fone" placeholder="Informe o telefone" required>
             <label for="email" hidden>E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Informe o email">
+            <input type="email" id="email" name="email" placeholder="Informe o email" required>
 
         </form>
         <button id="save-contact" class="save">Salvar</button>

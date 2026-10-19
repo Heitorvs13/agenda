@@ -1,9 +1,9 @@
 | Tarefa | Responsável | Status |
 | ------ | ----------- | ------ |
 | Estruturação da página | Heitor | `Concluída` |
-| Estilização da página | Heitor | `Em andamento` |
-| Configuração da Aquisição dos Dados | --- | --- |
-| Persistência dos Contatos | --- | --- |
+| Estilização da página | Heitor | `Concluída` |
+| Configuração da Aquisição dos Dados | Heitor | `Concluída` |
+| Persistência dos Contatos | Heitor | `Concluída` |
 | Listagem dos Contatos | --- | --- |
 | Ordenação dos Contatos | --- | --- |
 | Estado de exibição sem dados | --- | --- |
