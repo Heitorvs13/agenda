@@ -9,7 +9,7 @@ export function renderList(contacts) {
 
     list.innerHTML = '';
 
-    if (contacts) {
+    if (contacts.length > 0) {
         const sorted = sortContacts(contacts);
 
         sorted.forEach(c => {
@@ -83,6 +83,6 @@ export function renderList(contacts) {
     }
 
     list.innerHTML = `
-        <h1>Nenhum contato cadastrado :(</h1>
+        <h1 class="nodata-contatos">Nenhum contato encontrado! :(</h1>
     `
 }

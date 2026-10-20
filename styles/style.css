@@ -207,6 +207,17 @@ input[type="email"] {
 
 .contatos {
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contatos .nodata-contatos {
+    position: relative;
+    padding-top: 10%;
+    font-family: var(--font-bold);
+    color: var(--background-dark);
+    font-size: 2rem;
 }
 
 .contatos .contato {

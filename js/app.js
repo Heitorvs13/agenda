@@ -6,6 +6,9 @@ const saveFormButton = document.getElementById('save-contact');
 
 saveFormButton.addEventListener('click', event => {
     repo.saveContact(event);
+
+    //Quando for implementar os filtros tem que atualizar a lista de contatos passados para que seja feita a partir do filtro.
+    contacts.renderList(repo.getContacts())
 });
 
 const phoneInputs = document.querySelectorAll('input.phone-input')
