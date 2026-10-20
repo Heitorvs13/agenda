@@ -22,9 +22,7 @@ export function saveContact(event) {
 
     contact.id = Date.now();
 
-    const localData = localStorage.getItem(storageKey);
-
-    const contacts = localData ? JSON.parse(localData) : [];
+    const contacts = getContacts();
 
     contacts.push(contact);
 
@@ -35,4 +33,11 @@ export function saveContact(event) {
     // Feedback visual e limpeza do formulário
     alert('Dados salvos com sucesso!');
     form.reset();
+}
+
+export function getContacts(){
+    
+    const localData = localStorage.getItem(storageKey);
+
+    return localData ? JSON.parse(localData) : [];
 }
